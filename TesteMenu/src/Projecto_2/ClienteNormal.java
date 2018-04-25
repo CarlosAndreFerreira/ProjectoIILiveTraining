@@ -10,6 +10,8 @@ public class ClienteNormal extends Cliente{
 	protected ContaPoupanca contaPoupanca;
 	protected ContaPrazo contaPrazo;
 	
+	ArrayList <ClienteNormal> arrayClientesNormal = new ArrayList<ClienteNormal>();
+	
 	public ClienteNormal(String titular, String numeroCartaoCidadao, String morada, String profissao, int telefones, String email, double saldoInicial) {
 		
 		super(titular, numeroCartaoCidadao, morada, profissao, telefones, email);
@@ -22,7 +24,11 @@ public class ClienteNormal extends Cliente{
 	}
 	
 	public ContaOrdem getContaOrdem() {
-		return this.contaOrdem;
+		return contaOrdem.getContaOrdem();
+	}
+	
+	public ClienteNormal getClienteNormal() {
+		return this;
 	}
 
 }

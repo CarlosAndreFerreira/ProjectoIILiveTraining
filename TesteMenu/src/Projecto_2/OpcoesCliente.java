@@ -7,20 +7,21 @@ import java.util.Scanner;
 
 public class OpcoesCliente {
 	
+	public OpcoesCliente() {
+		
+		listarEspecifico();
+	}
+	
 	ContaOrdem contaOrdem;
 	Cliente cliente;
-	
+	ClienteNormal clienteNormal;
+	ClienteVip clienteVip;
+	Insert insert;
 	
 	int clienteID;
 	int contaID;
 	int cartaoID;
 	String tipo_de_cliente;
-	
-	public OpcoesCliente() {
-	
-	listarEspecifico();
-	
-	}
 	
 	private void listarEspecifico() {
 		
@@ -137,8 +138,8 @@ public class OpcoesCliente {
 
 private void consultarSaldo() {
 	
-	for(ContaOrdem currCliente : contaOrdem.arrayContasOrdem) {
-		if(currCliente.getContaID() == contaID) {
+	for(ClienteNormal currCliente : insert.clienteNormal.arrayClientesNormal) {
+		if(currCliente.getContaOrdem().getContaID() == contaID) {
 			System.out.println("O saldo é de: " + currCliente.getContaOrdem().getSaldo() + "€.");
 			break;
 		}

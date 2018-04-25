@@ -9,6 +9,7 @@ public class Main {
 	}
 	
 	public static void DisplayMenu() {
+		
 		Scanner userInput = new Scanner(System.in);
 		String readOption;
 		

@@ -16,7 +16,6 @@ public abstract class Cliente {
 	protected String dataCriacao;
 	
 	ArrayList <Cliente> arrayClientes = new ArrayList<Cliente>();
-	ArrayList <ClienteNormal> arrayClientesNormal = new ArrayList<ClienteNormal>();
 	ArrayList <ClienteVip> arrayClientesVip = new ArrayList<ClienteVip>();
 	
 	public Cliente (String titular, String numeroCartaoCidadao, String morada, String profissao, int telefones, String email) {

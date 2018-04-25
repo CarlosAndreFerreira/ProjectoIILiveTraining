@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Insert {
 	
-	Cliente cliente;
-	
 	public Insert() {
 		
 		InsertData();
 	}
+	
+	ClienteNormal clienteNormal;
+	ClienteVip clienteVip;
 	
 	private void InsertData() {
 		Scanner userInput1 = new Scanner (System.in);
@@ -80,14 +81,14 @@ public class Insert {
 			
 			if ("N".equalsIgnoreCase(tipo_de_cliente)) {
 				
-				ClienteNormal clienteNormal = new ClienteNormal(nome, cc, morada, profissao, telefones, email, saldoInicial);
-				//cliente_id = clienteNormal.getReferenciaInterna();
+				ClienteNormal clienteNormalBase = new ClienteNormal(nome, cc, morada, profissao, telefones, email, saldoInicial);
+				this.clienteNormal = clienteNormalBase;
 				cliente_id = clienteNormal.getIdCliente();
 				
 			}else if ("V".equalsIgnoreCase(tipo_de_cliente)) {
 				
-				ClienteVip clienteVip = new ClienteVip(nome, cc, morada, profissao, telefones, email, saldoInicial);
-				//cliente_id = clienteVip.getReferenciaInterna();
+				ClienteVip clienteVipBase = new ClienteVip(nome, cc, morada, profissao, telefones, email, saldoInicial);
+				this.clienteVip = clienteVipBase;
 				cliente_id = clienteVip.getIdCliente();
 				
 			}else {
