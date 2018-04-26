@@ -91,19 +91,19 @@ public class OpcoesCliente {
 				consultarSaldo();
 				break;
 			case "2":
-				consultarMovimentos();
+				//consultarMovimentos();
 				break;
 			case "3":
-				realizarTransferencia();
+				//realizarTransferencia();
 				break;
 			case "4":
-				realizarLevantamento();
+				//realizarLevantamento();
 				break;
 			case "5":
-				realizarDeposito();
+				//realizarDeposito();
 				break;
 			case "6":
-				cartaoDebito();
+				//cartaoDebito();
 				break;
 			case "7":
 				System.out.println("Insira saldo inicial da conta: ");
@@ -138,9 +138,9 @@ public class OpcoesCliente {
 
 private void consultarSaldo() {
 	
-	for(ClienteNormal currCliente : insert.clienteNormal.arrayClientesNormal) {
-		if(currCliente.getContaOrdem().getContaID() == contaID) {
-			System.out.println("O saldo é de: " + currCliente.getContaOrdem().getSaldo() + "€.");
+	for(Conta currCliente : cliente.arrayContas) {
+		if(((ContaOrdem) currCliente).getContaOrdem().getContaID() == contaID) {
+			System.out.println("O saldo é de: " + ((ContaOrdem) currCliente).getContaOrdem().getSaldo() + "€.");
 			break;
 		}
 	}
@@ -148,7 +148,7 @@ private void consultarSaldo() {
 	DisplayMenu();
 }
 
-private void consultarMovimentos() {
+/*private void consultarMovimentos() {
 	
 	for(ContaOrdem currCliente : contaOrdem.arrayContasOrdem) {
 		if(currCliente.getContaID() == contaID) {
@@ -336,6 +336,6 @@ private void CartaoDebitoRealizarDeposito() {
 		System.out.println("Operação não efectuada. Valor inválido.");
 		DisplayMenu();	
 	}
-}
+}*/
 
 }

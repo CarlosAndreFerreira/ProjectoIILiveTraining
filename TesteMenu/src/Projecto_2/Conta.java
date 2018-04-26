@@ -20,8 +20,6 @@ abstract class Conta {
 
 	ArrayList <Movimentos> arrayMovimentos = new ArrayList<Movimentos>();
 	
-	ArrayList <ContaOrdem> arrayContasOrdem = new ArrayList<ContaOrdem>();
-	
 	//CONSTRUTOR
 	Conta(Cliente cliente, double saldoInicial) {
 		numeroDeConta += 1;

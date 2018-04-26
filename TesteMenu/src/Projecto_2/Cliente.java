@@ -15,7 +15,8 @@ public abstract class Cliente {
 	protected static int numeroDeCliente;
 	protected String dataCriacao;
 	
-	ArrayList <Cliente> arrayClientes = new ArrayList<Cliente>();
+	ArrayList <Conta> arrayContas = new ArrayList<Conta>();
+	ArrayList <ClienteNormal> arrayClientesNormal = new ArrayList<ClienteNormal>();
 	ArrayList <ClienteVip> arrayClientesVip = new ArrayList<ClienteVip>();
 	
 	public Cliente (String titular, String numeroCartaoCidadao, String morada, String profissao, int telefones, String email) {
@@ -26,7 +27,6 @@ public abstract class Cliente {
 		this.telefones = telefones;
 		this.email = email;
 		numeroDeCliente +=1;
-		//arrayClientes.add(this);
 	}
 	
 	public int getIdCliente() {

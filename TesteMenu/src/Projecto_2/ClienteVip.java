@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 public class ClienteVip extends Cliente{
 	
-	String referenciaInterna = "CV." + Cliente.numeroDeCliente;
-	
 	protected ContaOrdem contaOrdem;
 	protected ContaPoupanca contaPoupanca;
 	protected ContaPrazo contaPrazo;
@@ -17,19 +15,17 @@ public class ClienteVip extends Cliente{
 		dataCriacao = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE);
 		System.out.println("Criado 'Cliente Vip' | ID Cliente: " + numeroDeCliente + " | Data de criação : " + dataCriacao);
 		contaOrdem = new ContaOrdem(this, saldoInicial);
-		contaOrdem.arrayContasOrdem.add(contaOrdem);
 		arrayClientesVip.add(this);
-		arrayClientes.add(this);
-	}
-	
-	public String getReferenciaInterna() {
-		return this.referenciaInterna;
+		arrayContas.add(contaOrdem);
 	}
 	
 	public ContaOrdem getContaOrdem() {
-		return this.contaOrdem;
+		return contaOrdem.getContaOrdem();
 	}
 	
+	public ClienteVip getClienteVip() {
+		return this;
+	}
 	
 
 }

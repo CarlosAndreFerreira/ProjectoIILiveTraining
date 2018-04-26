@@ -14,7 +14,7 @@ public class ContaOrdem extends Conta {
 		super(cliente, saldoInicial);
 		System.out.println("Criada 'Conta à Ordem' | ID da conta: " + numeroDeConta + " | Data de criação : " + dataCriacao);
 		cartaoDebito = new CartaoDebito(this);
-		arrayContasOrdem.add(this);
+		cliente.arrayContas.add(this);
 	}
 	
 	//MÉTODOS
